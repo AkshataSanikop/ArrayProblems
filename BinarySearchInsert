@@ -1,0 +1,34 @@
+public static Node insert(Node root,int data) {
+          if(root==null){
+               root=new Node(data);
+          return root;
+          }
+         
+          else{
+        Node temp=root;
+        Node newnode=new Node(data);   
+        
+
+            while(true){
+                if((data>temp.data) && (temp.right!= null)){
+                        temp=temp.right;                        
+                          continue; 
+                }
+                if((data<temp.data) && (temp.left!= null )){
+                         temp=temp.left;
+                         continue;
+                }
+               
+                else 
+                    break;
+                }
+                if(data>temp.data)
+                temp.right=newnode;
+                else
+                temp.left=newnode;
+                 return root;
+
+            }
+    }
+    
+            
